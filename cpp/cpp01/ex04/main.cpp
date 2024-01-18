@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: lobertho <lobertho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 00:01:32 by lobertho          #+#    #+#             */
-/*   Updated: 2024/01/09 00:47:59 by lobertho         ###   ########.fr       */
+/*   Updated: 2024/01/18 15:28:34 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ int main(int argc, char **argv)
 {
 	std::ifstream file(argv[1]);
 	std::string line;
-	std::string	s1 = argv[2];
-	std::string s2 = argv[3];
 
 	if (argc != 4)
 	{
@@ -28,6 +26,8 @@ int main(int argc, char **argv)
 	}
 	if(file)
 	{
+		std::string	s1 = argv[2];
+		std::string s2 = argv[3];
 		std::string replacename = argv[1];
 		replacename.append(".replace");
 		std::ofstream replacefile(replacename);

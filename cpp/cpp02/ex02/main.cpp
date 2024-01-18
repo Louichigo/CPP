@@ -5,33 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lobertho <lobertho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 17:44:38 by lobertho          #+#    #+#             */
-/*   Updated: 2024/01/18 12:51:30 by lobertho         ###   ########.fr       */
+/*   Created: 2024/01/16 14:47:15 by lobertho          #+#    #+#             */
+/*   Updated: 2024/01/18 17:26:26 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include "Fixed.hpp"
 
-int	main()
+int main()
 {
-	{
-		Weapon club = Weapon("crude spiked club");
+	Fixed		a;
+	//Fixed		c(0);
+	Fixed const	b(Fixed(5.05f) * Fixed(2));
 
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon club = Weapon("crude spiked club");
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
 
-		HumanB jim("jim");
-		//jim.attack();
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
+	std::cout << b << std::endl;
+
+	std::cout << Fixed::max(a, b) << std::endl;
+
+	//std::cout << a / c << std::endl;
+	
+	return 0;
 }

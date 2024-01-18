@@ -3,20 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lobertho <lobertho@student.42.fr>          +#+  +:+       +#+         #
+#    By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/29 16:50:23 by lobertho          #+#    #+#              #
-#    Updated: 2024/01/18 11:28:50 by lobertho         ###   ########.fr        #
+#    Created: 2024/01/16 14:46:45 by lobertho          #+#    #+#              #
+#    Updated: 2024/01/16 15:11:32 by lobertho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp Phonebook.cpp Contact.cpp
+SRCS = main.cpp Fixed.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = phonebook
+NAME = a.out
 
 ${NAME}:	${OBJS}
 			c++ ${FLAGS} ${OBJS} -o ${NAME}
