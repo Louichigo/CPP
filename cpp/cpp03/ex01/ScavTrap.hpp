@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lobertho <lobertho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 14:47:15 by lobertho          #+#    #+#             */
-/*   Updated: 2024/01/18 18:50:58 by lobertho         ###   ########.fr       */
+/*   Created: 2024/01/19 13:43:04 by lobertho          #+#    #+#             */
+/*   Updated: 2024/01/19 14:12:10 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int main()
+#include "ClapTrap.hpp"
+
+class ScavTrap : public ClapTrap
 {
-	Fixed		a;
-	Fixed		c(0);
-	Fixed const	b(Fixed(5.05f) * Fixed(2));
+private:
 
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
+public:
+	ScavTrap();
+	~ScavTrap();
+	ScavTrap(const ScavTrap &src);
+	ScavTrap &operator=(const ScavTrap &rhs);
 
-	std::cout << b << std::endl;
+	void	guardGate();
+};
 
-	std::cout << Fixed::max(a, b) << std::endl;
-
-	std::cout << a / c << std::endl;
-	
-	return 0;
-}
+#endif

@@ -5,31 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lobertho <lobertho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 14:47:15 by lobertho          #+#    #+#             */
-/*   Updated: 2024/01/18 18:40:44 by lobertho         ###   ########.fr       */
+/*   Created: 2024/01/19 11:32:12 by lobertho          #+#    #+#             */
+/*   Updated: 2024/01/19 13:38:28 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "ClapTrap.hpp"
 
 int main()
 {
-	Fixed		a;
-	Fixed const	b(10);
-	Fixed const c(42.42f);
-	Fixed const	d(b);
+	ClapTrap bob("Bob");
 
-	a = Fixed(1234.4321f);
+	std::cout << "\033[31m";
+	bob.attack("a tree");
+	bob.attack("a bin");
+	bob.attack("a stranger");
+	bob.attack("a bird");
+	bob.attack("someone in the park");
+	bob.attack("a wall");
+	std::cout << "\033[37m" << std::endl;
 
-	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
-
-	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-	
-	return 0;
+	bob.beRepaired(2);
+	bob.takeDamage(2);
+	bob.beRepaired(5);
+	bob.takeDamage(6);
+	bob.beRepaired(1);
+	bob.beRepaired(1);
+	bob.beRepaired(1);
+	bob.beRepaired(1);
+	bob.beRepaired(1);
+	return (0);
 }

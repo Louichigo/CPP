@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: lobertho <lobertho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 14:47:15 by lobertho          #+#    #+#             */
-/*   Updated: 2024/01/16 14:38:59 by lobertho         ###   ########.fr       */
+/*   Updated: 2024/01/19 11:48:19 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed() : value(0)
+Fixed::Fixed() : value(2)
 {
 	std::cout << "Default constructor called" << std::endl;	
 	return;
