@@ -3,36 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lobertho <lobertho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 11:32:12 by lobertho          #+#    #+#             */
-/*   Updated: 2024/01/19 13:38:28 by lobertho         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:43:23 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
 	ClapTrap bob("Bob");
-
-	std::cout << "\033[31m";
 	bob.attack("a tree");
-	bob.attack("a bin");
-	bob.attack("a stranger");
-	bob.attack("a bird");
-	bob.attack("someone in the park");
-	bob.attack("a wall");
-	std::cout << "\033[37m" << std::endl;
-
-	bob.beRepaired(2);
 	bob.takeDamage(2);
 	bob.beRepaired(5);
-	bob.takeDamage(6);
-	bob.beRepaired(1);
-	bob.beRepaired(1);
-	bob.beRepaired(1);
-	bob.beRepaired(1);
-	bob.beRepaired(1);
+
+	std::cout << "\n\n\n" << std::endl;
+
+	ScavTrap px5("Px5");
+	px5.attack("a tree");
+	px5.takeDamage(2);
+	px5.beRepaired(5);
+	px5.guardGate();
+		
 	return (0);
 }

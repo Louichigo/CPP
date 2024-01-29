@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 13:43:04 by lobertho          #+#    #+#             */
-/*   Updated: 2024/01/23 16:08:56 by lobertho         ###   ########.fr       */
+/*   Created: 2024/01/29 14:49:32 by lobertho          #+#    #+#             */
+/*   Updated: 2024/01/29 15:10:17 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#include "Brain.hpp"
 
-#include "ClapTrap.hpp"
-#include <iostream>
-#include <string>
-
-class ScavTrap : public ClapTrap
+Brain::Brain()
 {
-public:
-	ScavTrap();
-	~ScavTrap();
-	ScavTrap(std::string const name);
-	ScavTrap(const ScavTrap &src);
+	std::cout << "Something does have a brain..." << std::endl;
+}
 
-	ScavTrap	&operator=(const ScavTrap &rhs);
-	
-	void	guardGate();
-	void	attack(const std::string &target);
-};
+Brain::~Brain()
+{
+	std::cout << "Something had his brain squished." << std::endl;
+}
 
-#endif
+Brain::Brain(const Brain &src)
+{
+	*this = src;
+}
+
+Brain	&Brain::operator=(const Brain &rhs)
+{
+	for (int i = 0; i < 100; i++)
+		this->ideas[i] = rhs.ideas[i];
+	return *this;
+}

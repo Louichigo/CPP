@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 13:43:04 by lobertho          #+#    #+#             */
-/*   Updated: 2024/01/23 16:08:56 by lobertho         ###   ########.fr       */
+/*   Created: 2024/01/24 14:05:04 by lobertho          #+#    #+#             */
+/*   Updated: 2024/01/29 15:25:30 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#include "Animal.hpp"
+#include "WrongAnimal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-#include "ClapTrap.hpp"
-#include <iostream>
-#include <string>
-
-class ScavTrap : public ClapTrap
+int main()
 {
-public:
-	ScavTrap();
-	~ScavTrap();
-	ScavTrap(std::string const name);
-	ScavTrap(const ScavTrap &src);
+	Animal *animals[8];
 
-	ScavTrap	&operator=(const ScavTrap &rhs);
+	for(int i = 0; i < 4; i++)
+		animals[i] = new Dog();
+	for(int i = 4; i < 8; i++)
+		animals[i] = new Cat();
+
+	std::cout << "\n\n" << std::endl;
 	
-	void	guardGate();
-	void	attack(const std::string &target);
-};
-
-#endif
+	for(int i = 0; i < 8; i++)
+		delete animals[i];
+	return 0;
+}

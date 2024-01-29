@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/19 11:30:12 by lobertho          #+#    #+#              #
-#    Updated: 2024/01/23 16:16:30 by lobertho         ###   ########.fr        #
+#    Created: 2024/01/24 14:04:11 by lobertho          #+#    #+#              #
+#    Updated: 2024/01/29 14:47:16 by lobertho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = scavtrap
+NAME = animal
 
 ${NAME}:	${OBJS}
 			c++ ${FLAGS} ${OBJS} -o ${NAME}

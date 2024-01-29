@@ -6,17 +6,17 @@
 #    By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/19 11:30:12 by lobertho          #+#    #+#              #
-#    Updated: 2024/01/23 16:16:30 by lobertho         ###   ########.fr        #
+#    Updated: 2024/01/24 13:53:09 by lobertho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = scavtrap
+NAME = fragtrap
 
 ${NAME}:	${OBJS}
 			c++ ${FLAGS} ${OBJS} -o ${NAME}

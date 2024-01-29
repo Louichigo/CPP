@@ -6,7 +6,7 @@
 /*   By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 11:32:38 by lobertho          #+#    #+#             */
-/*   Updated: 2024/01/24 13:56:35 by lobertho         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:55:30 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,13 @@
 
 ClapTrap::ClapTrap() : HitPoints(10), EnergyPoints(10), AttackDamage(0)
 {
-	this->name = "Mr.X";
-	std::cout << "A default ClapTrap wa created. We will name him Mr.X. He has " << this->HitPoints;
-	std::cout << " points of health and " << this->EnergyPoints << " points of energy." << std::endl;
+	std::cout << "A ClapTrap is creating..." << std::endl;
 	return;
 }
 
-ClapTrap::ClapTrap(std::string name) : HitPoints(10), EnergyPoints(10), AttackDamage(0)
+ClapTrap::ClapTrap(std::string name) : name(name), HitPoints(10), EnergyPoints(10), AttackDamage(0)
 {
-	this->name = name;
-	std::cout << "A ClapTrap named " << this->name << " was created. He has " << this->HitPoints;
-	std::cout << " points of health and " << this->EnergyPoints << " points of energy." << std::endl;
+	std::cout << "A ClapTrap is creating..." << std::endl;
 	return;
 }
 

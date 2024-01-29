@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: lobertho <lobertho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 20:58:46 by lobertho          #+#    #+#             */
-/*   Updated: 2023/12/18 15:21:09 by lobertho         ###   ########.fr       */
+/*   Updated: 2024/01/18 11:28:59 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PHONEBOOK_HPP
 
 #include <iostream>
-#include "contact.hpp"
+#include "Contact.hpp"
 
 class PhoneBook
 {

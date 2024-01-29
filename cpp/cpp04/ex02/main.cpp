@@ -5,34 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 11:32:12 by lobertho          #+#    #+#             */
-/*   Updated: 2024/01/23 16:35:31 by lobertho         ###   ########.fr       */
+/*   Created: 2024/01/24 14:05:04 by lobertho          #+#    #+#             */
+/*   Updated: 2024/01/29 15:57:47 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "Aanimal.hpp"
+#include "WrongAnimal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
-	ClapTrap bob("Bob");
+	Aanimal *animals[8];
 
-	std::cout << "\033[31m";
-	bob.attack("a tree");
-	bob.attack("a bin");
-	bob.attack("a stranger");
-	bob.attack("a bird");
-	bob.attack("someone in the park");
-	bob.attack("a wall");
-	std::cout << "\033[37m" << std::endl;
+	for(int i = 0; i < 4; i++)
+		animals[i] = new Dog();
+	for(int i = 4; i < 8; i++)
+		animals[i] = new Cat();
 
-	bob.beRepaired(2);
-	bob.takeDamage(2);
-	bob.beRepaired(5);
-	bob.takeDamage(6);
-	bob.beRepaired(1);
-	bob.beRepaired(1);
-	bob.beRepaired(1);
-	bob.beRepaired(1);
-	bob.beRepaired(1);
-	return (0);
+	std::cout << "\n\n" << std::endl;
+	
+	for(int i = 0; i < 8; i++)
+		delete animals[i];
+
+	//std::cout << "\n\n" << std::endl;
+	//Aanimal test;
+	//std::cout << test.getType() << std::endl;
+	return 0;
 }
