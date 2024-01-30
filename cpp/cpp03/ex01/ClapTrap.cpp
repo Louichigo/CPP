@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: lobertho <lobertho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 11:32:38 by lobertho          #+#    #+#             */
-/*   Updated: 2024/01/24 13:56:13 by lobertho         ###   ########.fr       */
+/*   Updated: 2024/01/30 14:33:00 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ClapTrap::ClapTrap(std::string name) : name(name), HitPoints(10), EnergyPoints(1
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap named " << this->name << " destoryed." << std::endl;
+	std::cout << "ClapTrap named " << this->name << " destroyed." << std::endl;
 	return;
 }
 

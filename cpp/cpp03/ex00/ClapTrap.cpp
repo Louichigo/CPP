@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: lobertho <lobertho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 11:32:38 by lobertho          #+#    #+#             */
-/*   Updated: 2024/01/24 13:56:35 by lobertho         ###   ########.fr       */
+/*   Updated: 2024/01/30 14:32:44 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ClapTrap::ClapTrap() : HitPoints(10), EnergyPoints(10), AttackDamage(0)
 {
 	this->name = "Mr.X";
-	std::cout << "A default ClapTrap wa created. We will name him Mr.X. He has " << this->HitPoints;
+	std::cout << "A default ClapTrap was created. We will name him Mr.X. He has " << this->HitPoints;
 	std::cout << " points of health and " << this->EnergyPoints << " points of energy." << std::endl;
 	return;
 }
@@ -30,7 +30,7 @@ ClapTrap::ClapTrap(std::string name) : HitPoints(10), EnergyPoints(10), AttackDa
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap named " << this->name << " destoryed." << std::endl;
+	std::cout << "ClapTrap named " << this->name << " destroyed." << std::endl;
 	return;
 }
 

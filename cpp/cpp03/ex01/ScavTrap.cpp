@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: lobertho <lobertho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 13:42:53 by lobertho          #+#    #+#             */
-/*   Updated: 2024/01/24 13:54:45 by lobertho         ###   ########.fr       */
+/*   Updated: 2024/01/30 14:33:18 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ ScavTrap::ScavTrap()
 	this->AttackDamage = 20;
 	this->EnergyPoints = 50;
 	this->HitPoints = 100;
-	std::cout << "A default ScavTrap wa created. We will name him xp. He has " << this->HitPoints;
+	std::cout << "A default ScavTrap was created. We will name him xp. He has " << this->HitPoints;
 	std::cout << " points of health and " << this->EnergyPoints << " points of energy." << std::endl;
 	return;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap named " << this->name << " destoryed." << std::endl;
+	std::cout << "ScavTrap named " << this->name << " destroyed." << std::endl;
 	return;
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lobertho <lobertho@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: lobertho <lobertho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 13:26:24 by lobertho          #+#    #+#             */
-/*   Updated: 2024/01/24 13:55:08 by lobertho         ###   ########.fr       */
+/*   Updated: 2024/01/30 14:33:56 by lobertho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ FragTrap::FragTrap()
 	this->AttackDamage = 30;
 	this->EnergyPoints = 100;
 	this->HitPoints = 100;
-	std::cout << "A default FragTrap wa created. We will name him fraggy. He has " << this->HitPoints;
+	std::cout << "A default FragTrap was created. We will name him fraggy. He has " << this->HitPoints;
 	std::cout << " points of health and " << this->EnergyPoints << " points of energy." << std::endl;
 	return;
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap named " << this->name << " destoryed." << std::endl;
+	std::cout << "FragTrap named " << this->name << " destroyed." << std::endl;
 	return;
 }
 
